@@ -1,0 +1,1 @@
+Simple project that reads a .txt file and gives the choice of searching, sorting and editing from an array list.
