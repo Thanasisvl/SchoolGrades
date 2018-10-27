@@ -24,7 +24,7 @@ public class Directory {
 				String name = scan.next();
 				String surname = scan.next();
 				String age = scan.next();
-				double height = scan.nextDouble();
+				String height = scan.next();
 				String tuition = scan.next();
 				String date = scan.next();
 				String phone = scan.next();

@@ -3,7 +3,7 @@ public class Student {
 	private String name;
 	private String surname;
 	private String age;
-	private double height;
+	private String height;
 	private String tuition;
 	private String date;
 	private String phone;
@@ -11,11 +11,12 @@ public class Student {
 	
 	public Student() {}
 	
-	public Student(String name, String surname, String age, double height, 
+	public Student(String name, String surname, String age, String height, 
 			String tuition, String date, String phone) {
 		this.name = name;
 		this.surname = surname;
 		this.age = age;
+		this.height = height;
 		this.tuition = tuition;
 		this.date = date;
 		this.phone = phone;
@@ -47,11 +48,11 @@ public class Student {
 		this.age = age;
 	}
 
-	public double getHeight() {
+	public String getHeight() {
 		return height;
 	}
 
-	public void setHeight(double height) {
+	public void setHeight(String height) {
 		this.height = height;
 	}
 
