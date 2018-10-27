@@ -24,7 +24,7 @@ public class Directory {
 				String name = scan.next();
 				String surname = scan.next();
 				String age = scan.next();
-				double height = scan.nextDouble();
+				String height = scan.next();
 				String tuition = scan.next();
 				String date = scan.next();
 				String phone = scan.next();
@@ -61,7 +61,7 @@ public class Directory {
 		Scanner scan = new Scanner(System.in);
 		String userinput = scan.next();
 		for (Student student : studentlist) {
-			if (userinput == student.getSurname()); {
+			if (student.getSurname().equals(userinput)); {
 				System.out.println(student);
 				System.out.println();
 				break;
@@ -74,7 +74,7 @@ public class Directory {
 		Scanner scan = new Scanner(System.in);
 		String userinput = scan.next();
 		for (Student student : studentlist) {
-			if (userinput == student.getSurname()); {
+			if (userinput.equals(student.getSurname())); {
 				System.out.println(student);
 				System.out.println();
 				System.out.println("Press 1 to edit conduct or press 2 to edit phone number.");

@@ -5,7 +5,7 @@ public class Menu {
 	public void userMenu() {
 		boolean flag;
 		Directory dir = new Directory();
-
+		dir.readTxt("C:\\Users\\thana\\eclipse-workspace\\Week4-Project\\bin\\week4\\Lab3_Names.txt");
 		do {
 			Scanner scan = new Scanner(System.in);
 			System.out.println("Please press a number to make a selection.\n"
@@ -17,7 +17,7 @@ public class Menu {
 					+ "Press 6 to search and edit a student in the student file.\n"
 					+ "Press 7 to exit.");
 			String userinput = scan.next();
-			dir.readTxt("C:\\Users\\thana\\eclipse-workspace\\Week4-Project\\bin\\week4\\Lab3_Names.txt");
+			
 
 			switch (userinput) {
 

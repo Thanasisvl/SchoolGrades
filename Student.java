@@ -3,7 +3,7 @@ public class Student {
 	private String name;
 	private String surname;
 	private String age;
-	private double height;
+	private String height;
 	private String tuition;
 	private String date;
 	private String phone;
@@ -11,11 +11,12 @@ public class Student {
 	
 	public Student() {}
 	
-	public Student(String name, String surname, String age, double height, 
+	public Student(String name, String surname, String age, String height, 
 			String tuition, String date, String phone) {
 		this.name = name;
 		this.surname = surname;
 		this.age = age;
+		this.height = height;
 		this.tuition = tuition;
 		this.date = date;
 		this.phone = phone;
@@ -47,11 +48,11 @@ public class Student {
 		this.age = age;
 	}
 
-	public double getHeight() {
+	public String getHeight() {
 		return height;
 	}
 
-	public void setHeight(double height) {
+	public void setHeight(String height) {
 		this.height = height;
 	}
 
@@ -85,6 +86,30 @@ public class Student {
 
 	public void setConduct(String conduct) {
 		this.conduct = conduct;
+	}
+	
+	public boolean equals(Object other) {
+		if (other == this) return true;
+		if (other == null) return false;
+		if (getClass() != other.getClass()) return false;
+		Student student = (Student) other;
+		return (
+			name == student.name ||
+			(name != null && name.equals(student.name))) &&
+			(surname == student.surname ||
+			(surname != null && surname.equals(student.surname))) && 
+			(age == student.age ||
+			(age != null && age.equals(student.age))) &&
+			(height == student.height || 
+			(height != null && height.equals(student.height))) &&
+			(tuition == student.tuition ||
+			(tuition != null && tuition.equals(student.tuition))) &&
+			(date == student.date ||
+			(date != null && date.equals(student.date))) &&
+			(phone == student.phone ||
+			(phone != null && phone.equals(student.phone))) &&
+			(conduct == student.conduct ||
+			(conduct != null && conduct.equals(student.conduct)));
 	}
 
 	@Override
