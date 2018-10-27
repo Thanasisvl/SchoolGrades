@@ -1,95 +1,63 @@
-public class Student {
-	
-	private String name;
-	private String surname;
-	private String age;
-	private String height;
-	private String tuition;
-	private String date;
-	private String phone;
-	private String conduct;
-	
-	public Student() {}
-	
-	public Student(String name, String surname, String age, String height, 
-			String tuition, String date, String phone) {
-		this.name = name;
-		this.surname = surname;
-		this.age = age;
-		this.tuition = tuition;
-		this.date = date;
-		this.phone = phone;
-		this.conduct = "Good";
-	}
-	
-	
-	public String getName() {
-		return name;
-	}
+import java.util.Scanner;
 
-	public void setName(String name) {
-		this.name = name;
-	}
+public class Menu {
 
-	public String getSurname() {
-		return surname;
-	}
+	public void userMenu() {
+		boolean flag;
+		Directory dir = new Directory();
 
-	public void setSurname(String surname) {
-		this.surname = surname;
-	}
+		do {
+			Scanner scan = new Scanner(System.in);
+			System.out.println("Please press a number to make a selection.\n"
+					+ "Press 1 to print student file.\n"
+					+ "Press 2 to sort by Surname.\n"
+					+ "Press 3 to sort by Age.\n"
+					+ "Press 4 to sort by Phone number.\n"
+					+ "Press 5 to search a student.\n"
+					+ "Press 6 to search and edit a student in the student file.\n"
+					+ "Press 7 to exit.");
+			String userinput = scan.next();
+			dir.readTxt("C:\\Users\\thana\\eclipse-workspace\\Week4-Project\\bin\\week4\\Lab3_Names.txt");
 
-	public String getAge() {
-		return age;
-	}
+			switch (userinput) {
 
-	public void setAge(String age) {
-		this.age = age;
-	}
+			case "1":
+				dir.printDir();
+				break;
 
-	public String getHeight() {
-		return height;
-	}
+			case "2":
+				dir.sortSurname();
+				break;
 
-	public void setHeight(String height) {
-		this.height = height;
-	}
+			case "3":
+				dir.sortAge();
+				break;
 
-	public String getTuition() {
-		return tuition;
-	}
+			case "4":
+				dir.sortPhone();
+				break;
 
-	public void setTuition(String tuition) {
-		this.tuition = tuition;
-	}
+			case "5":
+				dir.searchStudent();
+				break;
+				
+			case "6":
+				dir.editStudent();
+				break;
 
-	public String getDate() {
-		return date;
-	}
-
-	public void setDate(String date) {
-		this.date = date;
-	}
-
-	public String getPhone() {
-		return phone;
-	}
-
-	public void setPhone(String phone) {
-		this.phone = phone;
-	}
-
-	public String getConduct() {
-		return conduct;
-	}
-
-	public void setConduct(String conduct) {
-		this.conduct = conduct;
-	}
-
-	@Override
-	public String toString() {
-		return "Student [name = " + name + ", surname = " + surname + ", age = " + age + ", height = " + height + ", tuition = "
-				+ tuition + ", date = " + date + ", phone = " + phone + ", conduct = " + conduct + "]";
+			case "7":
+				break;
+			}
+			System.out.println("Would you like to continue? Y/N");
+			String cont = scan.next().toUpperCase();
+			if (cont.equals("Y")) {
+				flag = true;
+			}
+			else {
+				System.out.println("Closing app.");
+				break;
+			}
+		}
+		while (flag);
 	}
 }

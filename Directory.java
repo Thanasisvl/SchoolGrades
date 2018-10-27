@@ -17,14 +17,14 @@ public class Directory {
 
 			Scanner scan = new Scanner(f);
 			scan.nextLine();
-			scan.useDelimiter(",|\n");
+			scan.useDelimiter(",\\s*|\r\n");
 
 			while (scan.hasNext()) {
 
 				String name = scan.next();
 				String surname = scan.next();
 				String age = scan.next();
-				String height = scan.next();
+				double height = scan.nextDouble();
 				String tuition = scan.next();
 				String date = scan.next();
 				String phone = scan.next();
