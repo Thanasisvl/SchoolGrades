@@ -57,6 +57,7 @@ public class Menu {
 				System.out.println("Closing app.");
 				break;
 			}
+			
 		}
 		while (flag);
 	}

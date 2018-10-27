@@ -57,11 +57,11 @@ public class Directory {
 	}
 
 	public void searchStudent() {
-		System.out.println("Please enter the student you want to search.");
 		Scanner scan = new Scanner(System.in);
+		System.out.println("Please enter the student you want to search.");		
 		String userinput = scan.next();
 		for (Student student : studentlist) {
-			if (student.getSurname().equals(userinput)); {
+			if (student.getSurname().equals(userinput)) {
 				System.out.println(student);
 				System.out.println();
 				break;
@@ -74,7 +74,7 @@ public class Directory {
 		Scanner scan = new Scanner(System.in);
 		String userinput = scan.next();
 		for (Student student : studentlist) {
-			if (userinput.equals(student.getSurname())); {
+			if (userinput.equals(student.getSurname())) {
 				System.out.println(student);
 				System.out.println();
 				System.out.println("Press 1 to edit conduct or press 2 to edit phone number.");
@@ -93,8 +93,9 @@ public class Directory {
 					System.out.println(student);
 					break;
 				}
+				System.out.println("The student does not exist.");
 			}
-			System.out.println("The student does not exist.");
+//			
 		}
 	}
 }
